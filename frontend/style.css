@@ -1,0 +1,187 @@
+/* === Reset + Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+  color: #333;
+}
+
+/* === Container Card === */
+.container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* === Header === */
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: #222;
+}
+
+/* === Form === */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input[type="text"],
+input[type="date"] {
+  flex: 1 1 60%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #007bff;
+  background-color: #f9fbff;
+}
+
+button[type="submit"] {
+  padding: 10px 18px;
+  font-size: 15px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* === Task List === */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f7f9fa;
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.01);
+  background-color: #f0f4f8;
+}
+
+/* Task title & due */
+li span {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+li span.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+li small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Action buttons */
+li div {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s ease-in-out, transform 0.1s;
+  font-size: 18px;
+}
+
+.action-btn:active {
+  transform: scale(0.9);
+}
+
+.action-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.action-btn.check {
+  color: #28a745;
+}
+
+.action-btn.delete {
+  color: #dc3545;
+}
+
+/* === Animations === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Responsive === */
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+
+  .action-btn {
+    font-size: 16px;
+  }
+}
