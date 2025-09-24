@@ -24,7 +24,7 @@ app.use((req, res) => {
 
 // ✅ MongoDB Atlas connection
 mongoose.connect(
-  'mongodb+srv://todoUser:963852741@cluster0.zyevnxs.mongodb.net/todo_app?retryWrites=true&w=majority&appName=Cluster0',
+  'Here your own mongo url',
   {
     ssl: true,
     serverSelectionTimeoutMS: 5000
